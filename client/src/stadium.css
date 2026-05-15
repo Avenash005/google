@@ -1,0 +1,8 @@
+/* StadiumOS supplemental styles */
+.glass { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow: 0 10px 30px rgba(2,6,23,0.6); }
+
+header.hero-banner { min-height: 220px }
+
+@media (max-width: 768px) {
+  header.hero-banner { padding: 16px }
+}
