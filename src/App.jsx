@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import './stadium.css'
@@ -22,12 +23,14 @@ export default function App() {
   const [momentum, setMomentum] = useState([])
   const [notifications, setNotifications] = useState([])
 
-  const agents = useMemo(() => [
+const agents = useMemo(() => [
     { id: 'hype', name: 'Hype Agent', subtitle: 'Detects exciting moments', activity: 'Scanning highlights', color: 'purple' },
     { id: 'emotion', name: 'Crowd Emotion', subtitle: 'Mood analysis & emoji', activity: 'Analyzing cheers', color: 'cyan' },
     { id: 'story', name: 'Storyline', subtitle: 'Cinematic narratives', activity: 'Weaving arcs', color: 'amber' },
     { id: 'challenge', name: 'Challenge', subtitle: 'Fan predictions & games', activity: 'Preparing poll', color: 'green' },
     { id: 'community', name: 'Community', subtitle: 'Tribes & engagement', activity: 'Grouping fans', color: 'cyan' },
+  ], [])
+
   useEffect(() => {
     const ticks = setInterval(() => {
       // adjust energy with small random walk
